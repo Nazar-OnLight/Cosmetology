@@ -1,0 +1,153 @@
+/* outline elements for debug */
+/**, *:before, *:after { -webkit-box-shadow: 0 0 1px green; box-shadow: 0 0 1px green; }*/
+
+/* make everything look same in different browser */
+body, h1, h2, h3, p { margin: 0; padding: 0;  }
+ { margin: 0; padding: 0; min-width: 96%; padding: 2%; font-size: 50px; color: #ccc; font-weight: 0;  width: 0% height: 0px; max-width: 0% }
+p {  line-height: 1em;    margin: 5%;}
+h2 {  line-height: 1em; margin-top: 1.5em;  margin-bottom: 2em;}
+ul, li { list-style: none; }
+a { text-decoration: none; font-family: 'Josefin Sans', sans-serif; }
+video {   width: 100%; height: 60%; }
+
+/* common styles */
+body { font-family: 'Josefin Sans', sans-serif; font-size: 12px; line-height: 18px; }
+h4 { font-size: 60px;font-family: 'Playfair Display SC', serif;    
+  color: white;
+}
+h1 { font-size: 24px;font-family: 'Playfair Display SC', serif; }
+h3 { font-size: 18px; min-width: 100%; }
+img { display: block; width: 100%; height: auto; }
+
+/**
+ * Layout
+ */
+.row { width: 100%; }
+.row:first-child ~ .row { background: #FFF; }
+.container { width: 100%; margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; }
+.container0 {width: 100%;}
+.column { flex: auto; }
+.container1 {  width: 100%; margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; }
+
+/*  only mobile  */
+@media screen and (max-width:680px) {
+    .row { }
+    .container { }
+    .column { }
+}
+
+/* only tablet */
+@media screen and (min-width:680px) and (max-width:1160px) {
+    .row { }
+    .container { }
+    .column { }
+}
+
+/* only desktop */
+@media screen and (min-width:1060px) {
+    .row { }
+    .container { max-width: 1160px; }
+    .column { }
+}
+
+/**
+ * Heights
+ */
+[class*="height"] { display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-items: center; align-items: center; -webkit-align-content: center; align-content: center; -webkit-justify-content: space-around; justify-content: space-around; }
+.height_80vh { min-height: 80vh; }
+.height_60vh { min-height: 60vh; }
+.height_40vh { min-height: 20vh; }
+.height_10vh { min-height: 10vh; }
+
+/**
+ * Menu
+ */
+.menu { display: flex; width: 100%; }
+.menu > a { color:  #00CCCC; font-size: 40px; }
+.menu > a:hover { color: #3baffc; }
+
+/**
+ * Video
+ */
+.video { width: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
+.title { min-width: 96%; padding: 2%; }
+.title {text-align:  center;}
+.video + .title h2 { font-weight: 300; font-size: 40px; }
+.video:after { content: ''; position: absolute; top: 0; left: 0; opacity: 0.8; background: url('/images/grid.png') repeat; width: 100vw; height: 100vh; z-index: 1; }
+
+/**
+ * List
+ */
+.list { display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+/**
+ * Grid
+ */
+.grid { display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+/**
+ * Slider
+ */
+.slider { display: flex; }
+.slider .slides { display: flex; }
+.slider button { background: #3baffc; width: 220px; height: 40px; }
+.slider button:first-child:after { display: block; width: 30px; height: 30px; content: 'Left'; }
+.slider button:first-child ~ button:after { display: block; width: 30px; height: 30px; content: 'Right'; }
+
+/**
+ * Card / item / block
+ */
+.item { max-width: 33%;  }
+.item1 { max-width: 33%;min-width: 0%;  }
+
+/*  only mobile  */
+@media screen and (max-width:680px) {
+    .grid .item { max-width: 50%; }
+    .list .item { max-width: 100%; }
+}
+
+/* only tablet */
+@media screen and (min-width:680px) and (max-width:1160px) {
+    .grid .item { max-width: 33.3333%; }
+    .list .item { max-width: 33.3333%; }
+}
+
+/* only desktop */
+@media screen and (min-width:1060px) {
+    .grid .item { max-width: 20%; }
+    .list .item { max-width: 50%; }
+}
+
+/**
+ * More button
+ */
+.more { }
+.more button { background:#00CED1; width: 220px; height: 40px; }
+
+/**
+ * Content
+ */
+.icon { }
+.image { }
+
+
+.text1 { min-width: 96%; padding: 2%; font-size: 30px; color: #ccc; font-weight: 400; }
+.text1 strong { font-weight: 600; }
+.text1 p { color: #ccc; }
+.text1 a { color: #ccc; }
+
+.text { min-width: 96%; padding: 2%; font-size: 16px; color: #ccc; font-weight: 400; }
+.text strong { font-weight: 600; }
+.text p { color: #ccc; }
+.text a { color: #ccc  ; }
+
+.text1 {
+    text-align:  center;
+   }
+   .text {
+    text-align:  center;
+   }
+
+   #polosa img {
+    float: left;
+   }
